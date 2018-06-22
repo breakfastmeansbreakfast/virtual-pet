@@ -5,6 +5,8 @@ const PET_MAXIMUM_FITNESS = 10;
 const PET_GROWUP_HUNGER = 5;
 const PET_GROWUP_FITNESS = 3;
 const PET_WALK_BENEFACTOR = 4;
+const PET_FEED = 3;
+const PET_HUNGER_MINIMUM = 0;
 
 // const Pet = require('../src/test1');
 function Pet(name) {
@@ -27,4 +29,11 @@ Pet.prototype.walk = function() {
     }
   }  
 
+Pet.prototype.feed = function() {
+    if((this.hunger - PET_FEED) >= PET_HUNGER_MINIMUM) {
+        this.hunger -= PET_FEED;
+    } else {
+        this.hunger = PET_HUNGER_MINIMUM;
+    }
+}
 module.exports = Pet;
