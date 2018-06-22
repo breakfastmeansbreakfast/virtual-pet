@@ -32,6 +32,13 @@ describe('hunger and fitness', () => {
         pet2.growUp();
         expect(pet2.fitness).toEqual(7)
     })
-}
+    it('checks the walk function makes the pet fitter', () => {
+        const pet3 = new Pet('Lenny');
+        pet3.fitness = 8;
+        pet3.walk();
+        expect(pet3.fitness).toEqual(10);
+
+    })
+    }
 
 )

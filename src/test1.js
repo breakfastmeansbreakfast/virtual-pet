@@ -1,25 +1,30 @@
+const PET_INITIAL_AGE = 0;
+const PET_INITIAL_HUNGER = 0;
+const PET_INITIAL_FITNESS = 10;
+const PET_MAXIMUM_FITNESS = 10;
+const PET_GROWUP_HUNGER = 5;
+const PET_GROWUP_FITNESS = 3;
+const PET_WALK_BENEFACTOR = 4;
+
 // const Pet = require('../src/test1');
 function Pet(name) {
-    this.age = 0,
-    this.hunger = 0,
-    this.fitness = 10,
+    this.age = PET_INITIAL_AGE,
+    this.hunger = PET_INITIAL_HUNGER,
+    this.fitness = PET_INITIAL_FITNESS,
     this.name = name
-/*    this.growUp = function () {
-        this.age += 1
-    }*/
     } 
 Pet.prototype.growUp = function() {
     this.age +=1
-    this.hunger +=5
-    this.fitness -=3
+    this.hunger += PET_GROWUP_HUNGER
+    this.fitness -= PET_GROWUP_FITNESS
 }
 
-/*Pet.prototype.walk = function() {
-    if(this.fitness > 6) {
-        this.fitness 
+Pet.prototype.walk = function() {
+    if ((this.fitness + PET_WALK_BENEFACTOR) <= PET_MAXIMUM_FITNESS ) {
+      this.fitness += PET_WALK_BENEFACTOR;
     } else {
-    this.fitness +=4
+      this.fitness = PET_MAXIMUM_FITNESS;
     }
-}*/
+  }  
 
 module.exports = Pet;
