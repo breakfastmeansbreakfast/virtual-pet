@@ -47,4 +47,29 @@ describe('hunger and fitness', () => {
     })
     }
 
+    
+)
+
+describe('verifies checkUp function', () => {
+    it('hunger', () => {
+        const pet5 = new Pet('Harry');
+        pet5.hunger = 8;
+        expect(pet5.checkUp()).toEqual('I am hungry');
+    })
+    it('fitness', () => {
+        const pet6 = new Pet('Gemma');
+        pet6.fitness = 1
+        expect(pet6.checkUp()).toEqual('I need a walk')
+    })
+    it('hunger and fitness', () => {
+        const pet7 = new Pet('Toby');
+        pet7.fitness = 0;
+        pet7.hunger = 9;
+        expect(pet7.checkUp()).toEqual('I am hungry AND I need a walk')
+    })
+    it('neither', () => {
+        const pet8 = new Pet('T Dawg');
+        expect(pet8.checkUp()).toEqual('I feel great!');
+    })
+}
 )
