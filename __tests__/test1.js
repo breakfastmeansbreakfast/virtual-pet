@@ -73,3 +73,13 @@ describe('verifies checkUp function', () => {
     })
 }
 )
+
+describe('checks the isAlive function', () => {
+    it('checks whether pet is alive after hunger =11', () => {
+        const pet9 = new Pet('Kiko');
+        pet9.hunger = 11;
+        expect(pet9.isAlive).toEqual(false);
+    }
+
+)
+})
