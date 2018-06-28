@@ -26,11 +26,10 @@ const PET_NAME  = new Pet (' PET_NAME ')
 * ``` PET_NAME.walk ``` walks your pet, increasing fitness
 * ``` PET_NAME.isAlive ``` checks whether the pet is alive
 
+
 5. Global variables
 
 By default, your pet will die upon turning age 30, getting too hunry and getting unfit. You can change these variables by modifying src/test1.js
-
-End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
