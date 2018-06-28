@@ -16,17 +16,18 @@ node
 
 ```
 const Pet = require('./src/test1')
-const < PET NAME >  = new Pet (' < PET NAME > ')
+const PET_NAME  = new Pet (' PET_NAME ')
 
 ```
 4. Functions
-* ``` < PET NAME> ``` checks vitals
-* ``` < PET NAME>.growUp ``` ages the pet by 1 year
-* ``` < PET NAME>.feed ``` feeds your pet
-* ``` < PET NAME>.walk ``` walks your pet, increasing fitness
-* ``` < PET NAME>.isAlive ``` checks whether the pet is alive
+* ``` PET_NAME ``` reports vitals
+* ``` PET_NAME.growUp ``` ages the pet by 1 year
+* ``` PET_NAME.feed ``` feeds your pet
+* ``` PET_NAME.walk ``` walks your pet, increasing fitness
+* ``` PET_NAME.isAlive ``` checks whether the pet is alive
 
 5. Global variables
+
 By default, your pet will die upon turning age 30, getting too hunry and getting unfit. You can change these variables by modifying src/test1.js
 
 End with an example of getting some data out of the system or using it for a little demo
