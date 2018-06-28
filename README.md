@@ -51,7 +51,7 @@ npm test -- test1
 
 ## Authors
 
-* **Tom Dunn** - *Initial work* - [breakfastmeansbreakfast](https://github.com/breakfastmeansbreakfast)
+* **Tom Dunn** - [breakfastmeansbreakfast](https://github.com/breakfastmeansbreakfast)
 
 
 ## Acknowledgments
