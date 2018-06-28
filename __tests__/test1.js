@@ -63,7 +63,7 @@ describe('verifies checkUp function', () => {
     })
     it('hunger and fitness', () => {
         const pet7 = new Pet('Toby');
-        pet7.fitness = 0;
+        pet7.fitness = 1;
         pet7.hunger = 9;
         expect(pet7.checkUp()).toEqual('I am hungry AND I need a walk')
     })
@@ -83,3 +83,13 @@ describe('checks the isAlive function', () => {
 
 )
 })
+
+describe('checks if an error is thrown when pet is not alive', () => {
+    it ('checks for error when age is over 30', () => {
+        const pet10 = new Pet('DeadThing');
+        pet10.hunger = 31;
+        expect(pet10.feed).toThrow('Your pet is no longer alive :(');
+    }
+)
+}
+)
