@@ -5,28 +5,43 @@ Virtual pet written in Javascript (ES6)
 
 ### Installing
 
-A step by step series of examples that tell you how to get a development env running
+1. Clone it down
 
-Say what the step will be
-
-```
-Give the example
-```
-
-And repeat
+2. Open node
 
 ```
-until finished
+node
 ```
+3. Create instance of a new Pet
+
+```
+const Pet = require('./src/test1')
+const < PET NAME >  = new Pet (' < PET NAME > ')
+
+```
+4. Functions
+* ``` < PET NAME> ``` checks vitals
+* ``` < PET NAME>.growUp ``` ages the pet by 1 year
+* ``` < PET NAME>.feed ``` feeds your pet
+* ``` < PET NAME>.walk ``` walks your pet, increasing fitness
+* ``` < PET NAME>.isAlive ``` checks whether the pet is alive
+
+5. Global variables
+By default, your pet will die upon turning age 30, getting too hunry and getting unfit. You can change these variables by modifying src/test1.js
 
 End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
 
-Install Jest and run 
+Install Jest:
+```
+npm install -D jest
+```
 
+To run the tests: 
+```
 npm test -- test1
-
+```
 
 ## Built With
 
