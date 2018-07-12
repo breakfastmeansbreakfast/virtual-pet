@@ -1,4 +1,5 @@
 // Settings for Virtual Pet
+// nice use of constants
 const PET_INITIAL_AGE = 0;
 const PET_INITIAL_HUNGER = 0;
 const PET_INITIAL_FITNESS = 10;
@@ -19,11 +20,12 @@ function Pet(name) {
 Pet.prototype = {
     get isAlive() {
         return this.age < 30 && this.hunger < 10 && this.fitness > 0;
-        }
-    }
+        } // this should line up with the function declaration (outdent 1 tab)
+    } // this should line up with Pet.prototype
     
 Pet.prototype.growUp = function() {
     if (!this.isAlive) {
+        // you use this same string a lot - consider assigning it to a constant
         throw new Error('Your pet is no longer alive :(');
       }      
     this.age +=1
@@ -54,6 +56,7 @@ Pet.prototype.feed = function() {
 }
 
 Pet.prototype.checkUp = function() {
+    // consider multiple if statements here
     if (!this.isAlive) {
         throw new Error('Your pet is no longer alive :(');
       }      
@@ -67,6 +70,7 @@ Pet.prototype.checkUp = function() {
         return 'I feel great!'
     }
 }
+// so many empty lines!!
 
 
 

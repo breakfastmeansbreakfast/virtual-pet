@@ -1,19 +1,22 @@
 const Pet = require('../src/test1');
+// add a line break here
 describe('constructor', () => {
     it('returns an object', () => {
       expect(new Pet('Fido')).toBeInstanceOf(Object);
     });
     it ('checks for pet name', () => {
         expect(new Pet('Fido')).toHaveProperty('name', 'Fido')
+        // no line breaks before a block of code closes
 
     });
     it ('checks correct age', () => {
         expect(new Pet('Fido')).toHaveProperty('age', 0)
     })
 }
-)
+) // this should trail the closing bracket
 
 describe('growUp', () => {
+    // inconsistent indentation here
     it('increments the age by 1', () => {
       const pet = new Pet('Fido');
       pet.growUp();
@@ -28,6 +31,10 @@ describe('hunger and fitness', () => {
         expect(pet.hunger).toEqual(5);
     })
     it('checks fitness has decreased', () => {
+        // variables are block scoped. pet2 is therefore only declared in this block of code
+        // and any nested blocks of code. It won't be available in the other it blocks because
+        // we'd have to go up a level and then into another block. Therefore you don't need
+        // to name your pet instances pet2, pet3 etc.
         const pet2 = new Pet ('Giles');
         pet2.growUp();
         expect(pet2.fitness).toEqual(7)
@@ -46,6 +53,7 @@ describe('hunger and fitness', () => {
         expect(pet4.hunger).toEqual(0);
     })
     }
+    // never have more than 1 empty line, and never have empty lines before a block closes
 
     
 )
@@ -90,6 +98,6 @@ describe('checks if an error is thrown when pet is not alive', () => {
         pet10.hunger = 31;
         expect(pet10.feed).toThrow('Your pet is no longer alive :(');
     }
-)
+) // this should trail the curly brace above
 }
-)
+) // this should trail the curly brace above
